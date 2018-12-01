@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Validate base
-          command: ls
+          command: pwd
   build-base:
     docker:
       - image: flannon/circleci-centos7-packer
@@ -19,7 +19,7 @@ jobs:
           at: ~/packer
       - run:
           name: Build base
-          command: ./build.sh base
+          command: ./build.py
           no_output_timeout: 30m
       #- persist_to_workspace:
       #    root: .

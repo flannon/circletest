@@ -9,6 +9,8 @@ def main():
     print("test")
     access = os.environ['AWS_ACCESS_KEY_ID']
     print("access: " + access)
+    ami_instance_profile = os.environ['AMI_INSTANCE_PROFILE']
+    print("ami_instance_profile: " + ami_instance_profile)
 
 if __name__ == "__main__":
     main()
