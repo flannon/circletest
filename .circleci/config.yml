@@ -21,7 +21,6 @@ jobs:
           name: Build base
           command: ./build.py
           no_output_timeout: 30m
-          context: aws_deploy
       #- persist_to_workspace:
       #    root: .
       #    paths:
@@ -34,5 +33,6 @@ workflows:
     jobs:
       - validate
       - build-base:
+          context: aws_deploy
           requires:
             - validate
